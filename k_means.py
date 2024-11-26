@@ -18,9 +18,6 @@ print(df)
 # df['status_type']= label_encoder.fit_transform(df['status_type'])
 # df['status_published']= label_encoder.fit_transform(df['status_published'])
 
-standard_scaler = StandardScaler()
-X_standardscaled = standard_scaler.fit_transform(df)
-
 
 minmax_scaled = MinMaxScaler(feature_range=(0, 1))
 X_minmax = minmax_scaled.fit_transform(df)
@@ -87,9 +84,6 @@ plt.xlabel('Cluster por RFM')
 plt.ylabel('Cluster por Frequência')
 plt.legend(title='Cluster')
 plt.show()
-
-
-
 
 
 
